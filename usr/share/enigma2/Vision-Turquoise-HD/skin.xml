@@ -1311,7 +1311,7 @@
 		<ePixmap pixmap="Vision-Turquoise-HD/buttons/key_red.png" position="830,15" zPosition="0" size="35,25" transparent="1" alphatest="blend"/>	
         <widget name="languagetext" zPosition="15" position="870,0" size="500,55" font="Regular;19" halign="left" valign="center" transparent="1"/>
         <widget name="text" position="400,350" size="620,300" zPosition="15" font="Regular;23" halign="center" valign="center" transparent="1"/>		
-		<widget name="rc" pixmaps="rc.png,skin_default/rcold.png" position="1095,60" zPosition="11" size="154,500" alphatest="blend" transparent="1"/>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1095,60" zPosition="11" size="154,500" alphatest="blend" transparent="1"/>
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="arrowdown.png" zPosition="11" alphatest="blend"/>
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="arrowdown.png" zPosition="11" alphatest="blend"/>
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="arrowup.png" zPosition="11" alphatest="blend"/>
@@ -1512,27 +1512,27 @@
 		<widget name="AdapterInfo_OK" position="310,152" size="38,31" zPosition="2" pixmap="icons/lock_on.png" alphatest="blend"/>
 		<widget name="Adaptertext" position="80,150" size="610,25" zPosition="1" font="Regular;20" foregroundColors="#0000fafa,#00ffffff" backgroundColor="#00030303" transparent="1"/>
 		<widget name="Adapter" position="345,150" size="610,25" zPosition="1" font="Regular;20" foregroundColors="#0000fafa,#00ff0d0d,#00ffffff" backgroundColor="#00030303" transparent="1"/>
-		<widget name="NetworkInfo_Check" position="310,202" size="38,31" zPosition="2" pixmaps="icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="blend"/>
+		<widget name="NetworkInfo_Check" position="310,202" size="38,31" zPosition="2" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="blend"/>
 		<widget name="Networktext" position="80,200" size="610,25" zPosition="1" font="Regular;20" foregroundColors="#0000fafa,#00ffffff" backgroundColor="#00030303" transparent="1"/>
 		<widget name="Network" position="345,200" size="610,25" zPosition="1" font="Regular;20" foregroundColors="#0000fafa,#00ff0d0d,#00ffffff" backgroundColor="#00030303" transparent="1"/>
-		<widget name="DhcpInfo_Check" position="310,252" size="38,31" zPosition="2" pixmaps="icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="blend"/>
+		<widget name="DhcpInfo_Check" position="310,252" size="38,31" zPosition="2" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="blend"/>
 		<widget name="Dhcptext" position="80,250" size="610,25" zPosition="1" font="Regular;20" foregroundColors="#0000fafa,#00ffffff" backgroundColor="#00030303" transparent="1"/>
 		<widget name="Dhcp" position="345,250" size="610,25" zPosition="1" font="Regular;20" foregroundColors="#0000fafa,#00ff0d0d,#00ffffff" backgroundColor="#00030303" transparent="1"/>
-		<widget name="IPInfo_Check" position="310,302" size="38,31" zPosition="2" pixmaps="icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="blend"/>
+		<widget name="IPInfo_Check" position="310,302" size="38,31" zPosition="2" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="blend"/>
 		<widget name="IPtext" position="80,300" size="610,25" zPosition="1" font="Regular;20" foregroundColors="#0000fafa,#00ffffff" backgroundColor="#00030303" transparent="1"/>
 		<widget name="IP" position="345,300" size="610,25" zPosition="1" font="Regular;20" foregroundColors="#0000fafa,#00ff0d0d,#00ffffff" backgroundColor="#00030303" transparent="1"/>
-		<widget name="DNSInfo_Check" position="310,352" size="38,31" zPosition="2" pixmaps="icons/lock_on.png,skin_default/icons/lock_error.png" alphatest="blend"/>
+		<widget name="DNSInfo_Check" position="310,352" size="38,31" zPosition="2" pixmaps="icons/lock_on.png,icons/lock_error.png" alphatest="blend"/>
 		<widget name="DNStext" position="80,350" size="610,25" zPosition="1" font="Regular;20" foregroundColors="#0000fafa,#00ffffff" backgroundColor="#00030303" transparent="1"/>
 		<widget name="DNS" position="345,350" size="610,25" zPosition="1" font="Regular;20" foregroundColors="#0000fafa,#00ff0d0d,#00ffffff" backgroundColor="#00030303" transparent="1"/>
-		<widget name="AdapterInfo" position="755,150" size="318,50" pixmaps="icons/lock_off.png,skin_default/icons/lock_on.png" alphatest="blend" zPosition="1"/>
+		<widget name="AdapterInfo" position="755,150" size="318,50" pixmaps="icons/lock_off.png,icons/lock_on.png" alphatest="blend" zPosition="1"/>
 		<widget name="AdapterInfo_Text" position="545,150" size="318,50" zPosition="2" font="Regular;20" transparent="1" foregroundColors="#0000fafa,#0073c6ff,#00009a00" backgroundColor="#00030303"/>
-		<widget name="NetworkInfo" position="755,200" size="318,50" pixmaps="icons/lock_off.png,skin_default/icons/lock_on.png" alphatest="blend" zPosition="1"/>
+		<widget name="NetworkInfo" position="755,200" size="318,50" pixmaps="icons/lock_off.png,icons/lock_on.png" alphatest="blend" zPosition="1"/>
 		<widget name="NetworkInfo_Text" position="545,200" size="318,50" zPosition="2" font="Regular;20" transparent="1" foregroundColors="#0000fafa,#0073c6ff,#00009a00" backgroundColor="#00030303"/>
-		<widget name="DhcpInfo" position="755,250" size="318,50" pixmaps="icons/lock_off.png,skin_default/icons/lock_on.png" alphatest="blend" zPosition="1"/>
+		<widget name="DhcpInfo" position="755,250" size="318,50" pixmaps="icons/lock_off.png,icons/lock_on.png" alphatest="blend" zPosition="1"/>
 		<widget name="DhcpInfo_Text" position="545,250" size="318,50" zPosition="2" font="Regular;20" transparent="1" foregroundColors="#0000fafa,#0073c6ff,#00009a00" backgroundColor="#00030303"/>
-		<widget name="IPInfo" position="755,300" size="318,50" pixmaps="icons/lock_off.png,skin_default/icons/lock_on.png" alphatest="blend" zPosition="1"/>
+		<widget name="IPInfo" position="755,300" size="318,50" pixmaps="icons/lock_off.png,icons/lock_on.png" alphatest="blend" zPosition="1"/>
 		<widget name="IPInfo_Text" position="545,300" size="318,50" zPosition="2" font="Regular;20" transparent="1" foregroundColors="#0000fafa,#0073c6ff,#00009a00" backgroundColor="#00030303"/>
-		<widget name="DNSInfo" position="755,350" size="318,50" zPosition="1" pixmaps="icons/lock_off.png,skin_default/icons/lock_on.png" alphatest="blend"/>
+		<widget name="DNSInfo" position="755,350" size="318,50" zPosition="1" pixmaps="icons/lock_off.png,icons/lock_on.png" alphatest="blend"/>
 		<widget name="DNSInfo_Text" position="545,350" size="318,50" zPosition="2" font="Regular;20" transparent="1" foregroundColors="#0000fafa,#0073c6ff,#00009a00" backgroundColor="#00030303"/>
 		<widget name="InfoText" position="125,345" size="585,300" zPosition="2" font="Regular;19" transparent="1" valign="center" halign="center" foregroundColor="#0000fafa" backgroundColor="#00030303"/>
 		<widget name="InfoTextBorder" position="120,340" size="595,310" zPosition="2"/>
@@ -1551,7 +1551,7 @@
 		<ePixmap pixmap="Vision-Turquoise-HD/buttons/key_red.png" position="90,354" zPosition="0" size="35,25" transparent="1" alphatest="blend"/>
 		<widget name="languagetext" position="130,355" size="150,30" font="Regular;19"/>
 		<widget name="wizard" pixmap="icons/wizard.png" position="90,140" zPosition="10" size="140,188" alphatest="blend"/>
-		<widget name="rc" pixmaps="rc.png,skin_default/rcold.png" position="950,110" zPosition="10" size="154,500" alphatest="blend" transparent="1"/>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="950,110" zPosition="10" size="154,500" alphatest="blend" transparent="1"/>
 		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
 		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
 		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
@@ -4862,7 +4862,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 	    <eLabel position="95,588" size="210,1" backgroundColor="#0000fafa" zPosition="16"/>
 	    <eLabel position="305,565" size="1,24" backgroundColor="#0000fafa" zPosition="16"/>		
 		<widget name="wizard" pixmap="icons/wizard.png" position="330,240" zPosition="10" size="140,188" alphatest="blend"/>
-		<widget name="rc" pixmaps="rc.png,skin_default/rcold.png" position="600,120" zPosition="10" size="0,0" alphatest="blend"/>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="600,120" zPosition="10" size="0,0" alphatest="blend"/>
 		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="0,0" alphatest="blend"/>
 		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="0,0" alphatest="blend"/>
 		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="0,0" alphatest="blend"/>		
@@ -4891,8 +4891,8 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<eLabel position="910,144" size="324,1" backgroundColor="#004ccbde" zPosition="3"/>		
 		<widget name="DescriptionBorder" position="10,400" size="503,0" zPosition="3" transparent="1"/>
         <widget name="chosenletter" position="845,345" size="380,185" font="Regular;50" halign="center" valign="center" transparent="1" zPosition="4"/>
-        <widget name="movie_sort" position="55,110" size="35,20" pixmaps="icons/ask.png,skin_default/icons/movielist.png,skin_default/icons/quit.png,skin_default/icons/pause.png,skin_default/icons/playlist.png,skin_default/icons/playlistquit.png,skin_default/icons/loop.png,skin_default/icons/rep.png"	zPosition="10" transparent="1" alphatest="on"/>
-        <widget name="movie_off" position="55,135" size="35,20" pixmaps="icons/ask.png,skin_default/icons/movielist.png,skin_default/icons/quit.png,skin_default/icons/pause.png,skin_default/icons/playlist.png,skin_default/icons/playlistquit.png,skin_default/icons/loop.png,skin_default/icons/rep.png"	zPosition="10" transparent="1" alphatest="on"/>
+        <widget name="movie_sort" position="55,110" size="35,20" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png,icons/rep.png"	zPosition="10" transparent="1" alphatest="on"/>
+        <widget name="movie_off" position="55,135" size="35,20" pixmaps="icons/ask.png,icons/movielist.png,icons/quit.png,icons/pause.png,icons/playlist.png,icons/playlistquit.png,icons/loop.png,icons/rep.png"	zPosition="10" transparent="1" alphatest="on"/>
         <widget source="Service" render="DRRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=10000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="905,320" zPosition="4" size="330,173" font="Regular;19" foregroundColor="#00a1d1ff" backgroundColor="#00030303" transparent="0" halign="center" valign="top">
             <convert type="EventName">ExtendedDescription</convert>
         </widget>
