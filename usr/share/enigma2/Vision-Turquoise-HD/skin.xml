@@ -1,25 +1,4 @@
 <skin>
-	<!--
-################### © Daconi MODE_пожар btvadriatico_NORHAP All Models ####################
-###################    SKIN COLLECTION 720p FOR NORHAPTV ALL MODELS     #################### 
-           
-
-   
-                       ??????     ???    ??????  ???????  ??   ?  ??
-                       ?    ??   ?? ??   ??      ??    ?  ???  ?  ??
-                       ?   ???  ???????  ??      ??    ?  ? ?? ?  ??
-                       ??????   ?    ??  ??????  ???????  ?  ???  ??
-					   
-					   
-           Esta piel está protegido por copyright 
-           Puede cambiar este aspecto SOLAMENTE PARA EL USO PERSONAL, PERO NO 'POSIBLE USO
-           CÓDIGO DE GRÁFICOS Y lo mismo para ellos uno nuevo o adaptar este CON LA PIEL
-           diferentes imágenes.
-	
-	################### © Daconi All Models ###################
-	
-	********** -->
-	
 	<output id="0">
 		<resolution xres="1280" yres="720" bpp="32"/>
 	</output>

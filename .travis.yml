@@ -23,5 +23,4 @@ git:
 script:
 - echo compiling TurquoiseHD skin
 - python -m compileall .
-- find . -type f -name "*.po" -exec msgfmt {} -o {}.mo \;
 - echo done!
