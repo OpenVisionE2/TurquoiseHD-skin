@@ -1573,7 +1573,7 @@
 		<ePixmap pixmap="buttons/key_info1.png" position="990,395" size="74,36" zPosition="2" alphatest="blend"/>	
 	</screen>
 	<!-- **********Network IPv6 Setup********** -->
-     <screen name="IPv6Setup" position="fill" flags="wfNoBorder">
+    <screen name="IPv6Setup" position="fill" flags="wfNoBorder">
 		<panel name="PantallaGenerica_sRG"/>	
 		<panel name="ScrollBarTemplate"/>
         <panel name="Title"/>
