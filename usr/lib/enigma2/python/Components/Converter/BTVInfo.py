@@ -42,7 +42,7 @@ class BTVInfo(Poll, Converter, object):
             box_info = None
 
         if box_info is not None:
-            return 'Dreambox %s' % box_info
+            return 'Model: %s' % box_info
 
     def getLoadAverage(self):
         try:
@@ -101,20 +101,20 @@ class BTVInfo(Poll, Converter, object):
                 uptime += str(hours) + ' ' + (hours == 1 and 'hora' or 'horas') + ', '
             if len(uptime) > 0 or minutes > 0:
                 uptime += str(minutes) + ' ' + (minutes == 1 and 'minuto' or 'minutos')
-            return 'Funcionamiento Receptor: %s' % uptime
+            return 'Uptime: %s' % uptime
 
     def getTempSensor(self):
         if getBoxType() not in ("dm7020hd","dm7020hdv2"):
             try:
                 sensor_info = sensors.getSensorsList(sensors.TYPE_TEMPERATURE)
             except:
-                return 'Temperatura: N/A'
+                return 'Temp: N/A'
                 sensor_info = None
 
             if sensor_info is not None:
                 if len(sensor_info) > 0:
-                    return 'Temperatura: %s\xc2\xb0C' % sensors.getSensorValue(sensor_info[0])
-        return 'Temperatura: No Sensor'
+                    return 'Temp: %s\xc2\xb0C' % sensors.getSensorValue(sensor_info[0])
+        return 'Temp: No Sensor'
 
     @cached
     def getText(self):
