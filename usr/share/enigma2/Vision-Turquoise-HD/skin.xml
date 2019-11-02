@@ -1739,7 +1739,7 @@
 	</screen>
 
 	<!-- **********NetWork Inadyn Log OK********** -->
-	<screen name="NetworkInadynLog" position="fill" flags="wfNoBorder">
+	<screen name="NetworkServiceLog" position="fill" flags="wfNoBorder">
 		<panel name="PantallaGenericaSinBarraColor2Pantallas"/>
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
