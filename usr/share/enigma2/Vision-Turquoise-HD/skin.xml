@@ -258,7 +258,7 @@
 		<eLabel position="5,715" size="1271,2" backgroundColor="#0000fafa" zPosition="1"/>
 		<eLabel position="1275,2" size="2,715" backgroundColor="#0000fafa" zPosition="1"/>
 		<ePixmap pixmap="icons/input_info.png" position="605,275" size="1280,720" alphatest="blend"/>
-		<widget name="text" position="280,350" size="720,75" zPosition="2" transparent="1" font="Regular;27" halign="center"/>
+		<widget name="text" position="280,350" size="720,150" zPosition="2" transparent="1" font="Regular;27" halign="center"/>
 	</screen>
 	<!-- ####### VirtualKeyBoard ####### -->
 	<screen name="VirtualKeyBoard" position="590,165" size="660,450" backgroundColor="#0003424a" zPosition="99" title="Virtual KeyBoard">
@@ -2637,7 +2637,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
-		<panel name="timerentry"/>		
+		<panel name="timerentry"/>
 		<ePixmap pixmap="buttons/key_info1.png" position="990,390" size="74,36" zPosition="2" alphatest="blend"/>
 		<ePixmap pixmap="icons/key_info.png" position="8,640" size="40,22" alphatest="blend" transparent="1" zPosition="2"/>
 		<widget name="timerlist" position="58,150" size="727,420" itemHeight="70" setFont="Regular;15" transparent="1" enableWrapAround="1" zPosition="1"/>
