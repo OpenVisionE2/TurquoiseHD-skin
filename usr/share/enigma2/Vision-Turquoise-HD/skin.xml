@@ -3643,7 +3643,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<eLabel position="719,110" size="1,25" backgroundColor="#0000fafa" zPosition="16"/>
 		<widget name="pused" position="275,112" size="150,25" font="Regular;20" halign="left" foregroundColor="#0000baff" backgroundColor="#0003424a" zPosition="2" transparent="1"/>
 		<widget name="pfree" position="635,112" size="150,25" font="Regular;20" halign="left" zPosition="2" foregroundColor="#0000baff" backgroundColor="#00010101" transparent="1"/>
-		<widget name="params" position="350,110" size="585,25" font="Regular;20" halign="left" foregroundColor="#004ccbde" backgroundColor="#00030303" transparent="1"/>
+		<widget name="params" rowsincolumn="25"/>
 		<widget name="rmemtext" position="80,135" size="250,350" font="Regular;19" zPosition="1" backgroundColor="#00030303" transparent="1"/>
 		<widget name="rmemvalue" position="270,140" size="250,350" font="Regular;19" zPosition="1" backgroundColor="#00030303" transparent="1"/>
 		<widget name="lmemtext" position="450,140" size="250,455" font="Regular;19" zPosition="1" backgroundColor="#00030303" transparent="1"/>
