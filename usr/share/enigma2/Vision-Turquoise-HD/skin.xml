@@ -2231,10 +2231,7 @@
 	<screen name="MessageBoxTemplate" position="fill" flags="wfNoBorder">
 		<panel name="PantallaPieTV"/>
 		<widget name="text" position="160,120" size="520,0" font="Regular;22" backgroundColor="#00030303" foregroundColor="#00a1d1ff" transparent="1"/>
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="100,108" size="53,53" alphatest="on"/>
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="100,108" size="53,53" alphatest="on"/>
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="100,108" size="53,53" alphatest="on"/>
-		<widget name="WarningPixmap" pixmap="icons/input_info.png" position="100,108" size="53,53" alphatest="on"/>
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="100,108" size="53,53" alphatest="blend" transparent="1"/>
 		<widget name="list" position="110,90" size="480,375" scrollbarMode="showOnDemand" selectionPixmap="icons/ls645x26.png" transparent="1"/>
 		<applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
@@ -3643,11 +3640,11 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<eLabel position="719,110" size="1,25" backgroundColor="#0000fafa" zPosition="16"/>
 		<widget name="pused" position="275,112" size="150,25" font="Regular;20" halign="left" foregroundColor="#0000baff" backgroundColor="#0003424a" zPosition="2" transparent="1"/>
 		<widget name="pfree" position="635,112" size="150,25" font="Regular;20" halign="left" zPosition="2" foregroundColor="#0000baff" backgroundColor="#00010101" transparent="1"/>
-		<widget name="params" rowsincolumn="25"/>
 		<widget name="rmemtext" position="80,135" size="250,350" font="Regular;19" zPosition="1" backgroundColor="#00030303" transparent="1"/>
 		<widget name="rmemvalue" position="270,140" size="250,350" font="Regular;19" zPosition="1" backgroundColor="#00030303" transparent="1"/>
 		<widget name="lmemtext" position="450,140" size="250,455" font="Regular;19" zPosition="1" backgroundColor="#00030303" transparent="1"/>
 		<widget name="lmemvalue" position="630,140" size="450,455" font="Regular;19" zPosition="1" backgroundColor="#00030303" transparent="1"/>
+		<widget name="params" rowsincolumn="25"/>
 		<ePixmap pixmap="buttons/key_info1.png" position="990,395" size="74,36" zPosition="2" alphatest="blend"/>
 		<widget name="info" position="840,440" size="390,150" foregroundColor="#004ccbde" font="Regular;21" backgroundColor="#00030303" transparent="1" halign="center" valign="center"/>
 	</screen>
@@ -6044,6 +6041,6 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 				"itemHeight": 72}
 			</convert>
 		</widget>
-		<widget source="thumbnail" render="Pixmap" position="0,0" size="100,72" alphatest="blend"/>
+		<widget name="thumbnail" position="0,0" />
 	</screen>
 </skin>
