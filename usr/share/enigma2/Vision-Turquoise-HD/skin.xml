@@ -3682,6 +3682,16 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<ePixmap pixmap="buttons/key_info1.png" position="990,395" size="74,36" zPosition="2" alphatest="blend"/>
 		<widget name="info" position="840,440" size="390,150" foregroundColor="#004ccbde" font="Regular;21" backgroundColor="#00030303" transparent="1" halign="center" valign="center"/>
 	</screen>
+	<!-- ******************** OPENVISION INFORMACION ******************** -->
+	<screen name="OpenVisionInformation" position="fill" flags="wfNoBorder">
+		<panel name="PantallaGenericaConfig"/>
+		<panel name="ScrollBarTemplate"/>
+		<panel name="Title"/>
+		<panel name="PIG"/>
+		<ePixmap position="934,416" zPosition="2" size="200,200"  pixmap="menu/ico_information.png" alphatest="blend" transparent="1"/>
+		<eLabel text="Open Vision information" position="300,120" size="270,50" font="Regular;24" halign="center" valign="center" foregroundColor="#0000fafa" backgroundColor="#00030303" transparent="1"/>
+		<widget name="AboutScrollLabel" position="80,170" size="728,420" font="Regular;21" backgroundColor="#00030303" transparent="1"/>
+	</screen>
 	<!-- ******************** DVB INFORMACION ******************** -->
 	<screen name="DVBInformation" position="fill" flags="wfNoBorder">
 		<panel name="PantallaGenericaConfig"/>
@@ -3689,7 +3699,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="Title"/>
 		<panel name="PIG"/>
 		<ePixmap position="934,416" zPosition="2" size="200,200"  pixmap="menu/ico_information.png" alphatest="blend" transparent="1"/>
-		<eLabel text="Open Vision information" position="300,120" size="270,50" font="Regular;24" halign="center" valign="center" foregroundColor="#0000fafa" backgroundColor="#00030303" transparent="1"/>
+		<eLabel text="DVB information" position="300,120" size="270,50" font="Regular;24" halign="center" valign="center" foregroundColor="#0000fafa" backgroundColor="#00030303" transparent="1"/>
 		<widget name="AboutScrollLabel" position="80,170" size="728,420" font="Regular;21" backgroundColor="#00030303" transparent="1"/>
 	</screen>
 	<!-- **********StreamingClientsInfo OK********** -->
