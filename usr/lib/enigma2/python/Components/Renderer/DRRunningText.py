@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 from Renderer import Renderer
 from skin import parseColor, parseFont
