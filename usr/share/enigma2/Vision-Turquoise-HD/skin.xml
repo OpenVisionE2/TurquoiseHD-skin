@@ -2689,7 +2689,9 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<sub name="Subtitle_Italic" font="Regular;40" foregroundColor="#00ffffff" shadowColor="#40101010" shadowOffset="-3,-3"/>
 	</subtitles>
 	<!-- ####### Subtitle Display ####### -->
-	<screen name="SubtitleDisplay" position="fill" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent"/>
+	<screen name="SubtitleDisplay" position="fill" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="message"/>
+	</screen>
 	<!-- ####### TimerEdit ####### -->
 	<screen name="TimerEdit" position="center,100" size="1160,560" title="Timer Edit">
 		<ePixmap pixmap="menu/backbox.png" zPosition="-1" position="0,0" size="1160,560" alphatest="on"/>
@@ -3395,6 +3397,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget font="Regular;27" halign="left" position="317,597" render="DRRunningText" options="movetype=running,steptime=10,startpoint=0,startdelay=1000,wrap=0,always=0,repeat=2,oneshot=1" noWrap="1" size="640,29" source="session.Event_Now" foregroundColor="#0077d8e6" backgroundColor="background" transparent="1" zPosition="2">
 			<convert type="EventName">Name</convert>
 		</widget>
+		<widget source="session.Event_Now" render="poster" position="73,120" size="85,125" zPosition="4"/>
 		<widget source="session.Event_Now" render="Label" position="232,597" size="82,28" zPosition="2" halign="left" font="Regular;27" foregroundColor="#0077d8e6" backgroundColor="#00333333" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
