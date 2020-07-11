@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import division
 from Renderer import Renderer
 from skin import parseColor, parseFont
 from enigma import eWidget, eLabel, eTimer, ePoint, eSize, gFont, RT_HALIGN_LEFT, RT_HALIGN_CENTER, RT_HALIGN_RIGHT, RT_HALIGN_BLOCK, RT_VALIGN_TOP, RT_VALIGN_CENTER, RT_VALIGN_BOTTOM, RT_WRAP
@@ -176,7 +177,7 @@ class DRRunningText(Renderer):
         self.scroll_label.resize(eSize(self.W, self.H))
         if self.direction in (TOP, BOTTOM):
             from enigma import fontRenderClass
-            flh = int(fontRenderClass.getInstance().getLineHeight(self.txfont) or self.txfont.pointSize / 6 + self.txfont.pointSize)
+            flh = int(fontRenderClass.getInstance().getLineHeight(self.txfont) or self.txfont.pointSize // 6 + self.txfont.pointSize)
             self.scroll_label.setText('WQq')
             if flh > self.scroll_label.calculateSize().height():
                 self.lineHeight = flh
@@ -227,7 +228,7 @@ class DRRunningText(Renderer):
                 text_width += 10
             self.mStop = None
             if self.lineHeight and self.direction in (TOP, BOTTOM):
-                text_height = max(text_height, (text_height + self.lineHeight - 1) / self.lineHeight * self.lineHeight)
+                text_height = max(text_height, (text_height + self.lineHeight - 1) // self.lineHeight * self.lineHeight)
             if self.direction in (LEFT, RIGHT):
                 if not self.mAlways and text_width <= self.W:
                     return False
@@ -258,11 +259,11 @@ class DRRunningText(Renderer):
                             self.P = self.B
                             self.mStep = -abs(self.mStep)
                         else:
-                            self.P = int(self.B / 2)
+                            self.P = int(self.B // 2)
                             self.mStep = self.direction == RIGHT and abs(self.mStep) or -abs(self.mStep)
                     else:
                         if text_width == self.W:
-                            text_width += max(2, text_width / 20)
+                            text_width += max(2, text_width // 20)
                         self.A = self.W - text_width
                         self.B = self.X
                         if self.halign == LEFT:
@@ -272,7 +273,7 @@ class DRRunningText(Renderer):
                             self.P = self.A
                             self.mStep = abs(self.mStep)
                         else:
-                            self.P = int(self.A / 2)
+                            self.P = int(self.A // 2)
                             self.mStep = self.direction == RIGHT and abs(self.mStep) or -abs(self.mStep)
                 else:
                     return False
@@ -307,7 +308,7 @@ class DRRunningText(Renderer):
                             self.mStep = abs(self.mStep)
                     else:
                         if text_height == self.H:
-                            text_height += max(2, text_height / 40)
+                            text_height += max(2, text_height // 40)
                         self.A = self.H - text_height
                         self.B = self.Y
                         if self.direction == TOP:
