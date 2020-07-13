@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division
 from Components.Converter.Converter import Converter
 from Components.Element import cached
 from enigma import eEPGCache, eServiceReference
@@ -113,7 +112,7 @@ class BTVRunning14Events(Converter, object):
         begin = strftime('%H:%M', localtime(event.getBeginTime()))
         end = strftime('%H:%M', localtime(event.getBeginTime() + event.getDuration()))
         title = event.getEventName()
-        duration = '%d min' % (event.getDuration() // 60)
+        duration = '%d min' % (event.getDuration() / 60)
         if self.showDuration == self.withDuration:
             f = '{begin} - {end} - {title:<} - {duration}'
             return f.format(begin=begin, end=end, title=title, duration=duration)
