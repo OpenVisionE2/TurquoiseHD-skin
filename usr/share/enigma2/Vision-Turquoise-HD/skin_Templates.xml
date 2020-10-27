@@ -633,4 +633,13 @@
 	<screen name="poster_movieselection">
 		<widget source="Service" render="xtraPoster" position="915,150" size="115,165" zPosition="4"/>
 	</screen>
+	<!-- INFORMATION SUPPORT AND SOURCES OPENVISION -->
+	<screen name="About_standard">
+		<widget source="lab1" render="Label" position="845,385" size="380,35" font="Regular;28" halign="center" valign="center" foregroundColor="#004ccbde" backgroundColor="#000c0d0e" transparent="1"/>
+		<widget source="lab2" render="Label" position="845,425" size="380,35" font="Regular;28" halign="center" valign="center" foregroundColor="#004ccbde" backgroundColor="#000c0d0e" transparent="1"/>
+		<widget source="lab3" render="Label" position="845,475" size="380,25" font="Regular;24" halign="center" valign="center" foregroundColor="#004ccbde" backgroundColor="#000c0d0e" transparent="1"/>
+		<widget source="lab4" render="Label" position="845,500" size="380,25" font="Regular;24" halign="center" valign="center" foregroundColor="#004ccbde" backgroundColor="#000c0d0e" transparent="1"/>
+		<widget source="lab5" render="Label" position="845,555" size="380,25" font="Regular;24" halign="center" valign="center" foregroundColor="#004ccbde" backgroundColor="#000c0d0e" transparent="1"/>
+		<widget source="lab6" render="Label" position="845,580" size="380,25" font="Regular;24" halign="center" valign="center" foregroundColor="#004ccbde" backgroundColor="#000c0d0e" transparent="1"/>
+	</screen>
 </skin>
