@@ -4,3 +4,8 @@ TurquoiseHD [![Build Status](https://travis-ci.org/OpenVisionE2/TurquoiseHD-skin
 Original skin by Daconi based on EGAdriatic for EGAMI
 
 Modified to be compatible with Open Vision
+
+![Screenshot](sc1.jpg)
+![Screenshot](sc2.jpg)
+![Screenshot](sc3.jpg)
+![Screenshot](sc4.jpg)
