@@ -2357,7 +2357,11 @@
 	<screen name="MessageBoxTemplate" position="fill" flags="wfNoBorder">
 		<panel name="PantallaPieTV"/>
 		<widget name="text" position="160,120" size="520,0" font="Regular;22" backgroundColor="#00030303" foregroundColor="#00a1d1ff" transparent="1"/>
-		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="100,108" size="53,53" alphatest="blend" transparent="1"/>
+		<widget name="ErrorPixmap" conditional="ErrorPixmap" pixmap="icons/input_error.png" position="100,108" size="53,53" alphatest="blend"/>
+		<widget name="QuestionPixmap" conditional="QuestionPixmap" pixmap="icons/input_question.png" position="100,108" size="53,53" alphatest="blend"/>
+		<widget name="InfoPixmap" conditional="InfoPixmap" pixmap="icons/input_info.png" position="100,108" size="53,53" alphatest="blend"/>
+		<widget name="WarningPixmap" conditional="WarningPixmap" pixmap="icons/input_warning.png" position="100,108" size="53,53" alphatest="blend"/>
+		<widget name="icon" conditional="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="100,108" size="53,53" alphatest="blend" transparent="1"/>
 		<widget name="list" position="110,90" size="480,375" scrollbarMode="showOnDemand" selectionPixmap="icons/ls645x26.png" transparent="1"/>
 		<applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
@@ -6178,7 +6182,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
-		<ePixmap pixmap="buttons/key_info1.png" position="990,395" size="74,36" zPosition="2" alphatest="blend"/>
+		<panel name="About_standard"/>
 		<widget source="menu" render="Listbox" position="69,145" zPosition="2" size="738,418" backgroundColor="#00030303" backgroundPixmap="icons/butselection1.png" selectionPixmap="icons/lsmenu.png" transparent="1" scrollbarMode="showAlways">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -6189,12 +6193,12 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 				}
 			</convert>
 		</widget>
-		<widget source="menu" render="Listbox" position="845,450" size="380,60" backgroundColor="#00030303" foregroundColor="#004ccbde" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
+		<widget source="menu" render="Listbox" position="80,450" size="720,60" backgroundColor="#00030303" foregroundColor="#004ccbde" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-				MultiContentEntryText(pos = (0,0),size = (450,60),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 2),# index 0 is the MenuText,
+				MultiContentEntryText(pos = (0,0),size = (720,60),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 2),# index 0 is the MenuText,
 				],
-				"fonts": [gFont("xRegular",15)],
+				"fonts": [gFont("Regular",22)],
 				"itemHeight": 60
 				}
 			</convert>
@@ -6205,12 +6209,12 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
-		<widget name="lab1" position="80,145" size="670,60" backgroundColor="#00030303" font="Regular;21" zPosition="2" transparent="1" halign="center"/>
-		<widget name="list" position="80,230" size="727,350" selectionPixmap="icons/ls705x38.png" font="Regular;23" backgroundColor="#00030303" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<panel name="About_standard"/>
+		<widget name="lab7" position="80,145" size="670,60" backgroundColor="#00030303" font="Regular;21" zPosition="2" transparent="1" halign="center"/>
+		<widget name="list" position="80,230" size="727,260" selectionPixmap="icons/ls705x38.png" font="Regular;23" backgroundColor="#00030303" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<ePixmap pixmap="icons/key_menu1.png" position="685,680" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="icons/key_info.png" position="730,680" size="40,22" alphatest="blend"/>
-		<ePixmap pixmap="buttons/key_info1.png" position="990,395" size="74,36" zPosition="2" alphatest="blend"/>
-		<widget name="backupstatus" position="835,460" size="390,25" foregroundColor="#004ccbde" font="Regular;21" backgroundColor="#00030303" transparent="1" halign="center" valign="center"/>
+		<widget name="backupstatus" position="80,500" size="727,30" foregroundColor="#004ccbde" font="Regular;21" backgroundColor="#00030303" transparent="1"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(30)
 		</applet>
@@ -6226,6 +6230,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="Title"/>
 		<panel name="PIG"/>
 		<panel name="description-info"/>
+		<panel name="About_standard"/>
 		<widget name="config" position="60,155" size="742,425" font="Regular;19" backgroundColor="#00030303" scrollbarMode="showAlways" scrollbarSliderForegroundColor="#00030303"/>
 	</screen>
 	<screen name="VISIONBackupManagerMenu" position="fill" flags="wfNoBorder">
@@ -6233,7 +6238,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
-		<panel name="description-info"/>
+		<panel name="About_standard"/>
 		<widget name="config" position="60,155" size="742,425" font="Regular;19" backgroundColor="#00030303" scrollbarMode="showAlways" scrollbarSliderForegroundColor="#00030303"/>
 	</screen>
 	<screen name="XtraPluginsSelection" position="fill" flags="wfNoBorder">
@@ -6241,6 +6246,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
+		<panel name="About_standard"/>
 		<widget name="checkList" position="75,140" size="733,425" backgroundColor="#00030303" scrollbarMode="showOnDemand" selectionPixmap="icons/ls700x30-h.png" transparent="1"/>
 	</screen>
 	<screen name="RestoreMenu" position="fill" flags="wfNoBorder">
@@ -6248,6 +6254,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
+		<panel name="About_standard"/>
 		<widget name="filelist" position="80,145" size="727,400" backgroundColor="#00030303" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 	<screen name="VISIONImageManager" position="fill" flags="wfNoBorder">
@@ -6255,9 +6262,10 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
-		<widget name="lab1" position="80,145" size="670,50" backgroundColor="#00030303" font="Regular;21" zPosition="2" transparent="1" halign="center"/>
-		<widget name="list" position="80,230" size="727,350" selectionPixmap="icons/ls705x38.png" font="Regular;21" backgroundColor="#00030303" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<widget name="backupstatus" position="835,460" size="390,25" foregroundColor="#004ccbde" font="Regular;21" backgroundColor="#00030303" transparent="1" halign="center" valign="center"/>
+		<panel name="About_standard"/>
+		<widget name="lab7" position="80,145" size="670,50" backgroundColor="#00030303" font="Regular;21" zPosition="2" transparent="1" halign="center"/>
+		<widget name="list" position="80,230" size="727,260" selectionPixmap="icons/ls705x38.png" font="Regular;21" backgroundColor="#00030303" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget name="backupstatus" position="80,500" size="727,30" foregroundColor="#004ccbde" font="Regular;21" backgroundColor="#00030303" transparent="1"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(30)
 		</applet>
@@ -6268,7 +6276,8 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
-		<widget name="lab1" position="80,130" size="670,30" font="Regular;21" backgroundColor="#00030303" foregroundColor="#004ccbde" zPosition="2" transparent="1" halign="center"/>
+		<panel name="About_standard"/>
+		<widget name="lab7" position="80,130" size="670,30" font="Regular;21" backgroundColor="#00030303" foregroundColor="#004ccbde" zPosition="2" transparent="1" halign="center"/>
 		<widget name="list" position="80,180" size="727,390" selectionPixmap="icons/ls705x38.png" font="Regular;23" backgroundColor="#00030303" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(30)
@@ -6279,7 +6288,8 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
-		<widget name="lab1" position="80,145" size="670,50" backgroundColor="#00030303" font="Regular;21" zPosition="2" transparent="1" halign="center"/>
+		<panel name="About_standard"/>
+		<widget name="lab7" position="80,145" size="670,50" backgroundColor="#00030303" font="Regular;21" zPosition="2" transparent="1" halign="center"/>
 		<widget name="list" position="80,230" size="727,350" selectionPixmap="icons/ls705x38.png" backgroundColor="#00030303" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(30)
@@ -6291,7 +6301,8 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
-		<widget source="list" render="Listbox" position="80,145" size="727,420" backgroundColor="#00030303" selectionPixmap="icons/ls700x90.png" transparent="1" scrollbarMode="showOnDemand">
+		<panel name="About_standard"/>
+		<widget source="list" render="Listbox" position="80,145" size="727,420" backgroundColor="#00030303" transparent="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (160, 10), size = (413, 30), font=0, text = 0),
@@ -6303,7 +6314,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 				}
 			</convert>
 		</widget>
-		<widget name="lab1" position="80,145" size="670,50" backgroundColor="#00030303" font="Regular;21" zPosition="2" transparent="1" halign="center"/>
+		<widget name="lab7" position="80,145" size="670,50" backgroundColor="#00030303" font="Regular;21" zPosition="2" transparent="1" halign="center"/>
 		<ePixmap pixmap="icons/key_menu1.png" position="10,638" size="40,22" alphatest="blend"/>
 	</screen>
 	<screen name="VISIONDevicePanelConf" position="fill" flags="wfNoBorder">
@@ -6311,6 +6322,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
+		<panel name="About_standard"/>
 		<widget name="config" position="65,150" size="735,250" backgroundColor="#00030303" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="#00030303"/>
 		<widget name="Linconn" position="65,420" size="840,20" font="Regular;19" halign="center" valign="center" backgroundColor="#00030303"/>
 	</screen>
@@ -6319,6 +6331,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
+		<panel name="About_standard"/>
 		<widget source="list" render="Listbox" position="60,150" size="727,420" selectionPixmap="icons/ls530x30.png" backgroundColor="#00030303" transparent="0" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -6331,14 +6344,14 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 				}
 			</convert>
 		</widget>
-		<widget name="lab1" position="80,145" size="670,50" font="Regular;21" zPosition="2" transparent="1" halign="center"/>
+		<widget name="lab7" position="80,145" size="670,50" font="Regular;21" zPosition="2" transparent="1" halign="center"/>
 	</screen>
 	<screen name="VISIONScriptRunner" position="fill" flags="wfNoBorder">
 		<panel name="PantallaGenericaConfig"/>
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
-		<ePixmap pixmap="icons/key_menu1.png" position="10,638" size="40,22" alphatest="blend"/>
+		<panel name="About_standard"/>
 		<widget name="list" position="80,145" size="727,420" selectionPixmap="icons/ls530x30.png" backgroundColor="#00030303" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 	</screen>
 	<screen name="VISIONSwap" position="fill" flags="wfNoBorder">
@@ -6346,15 +6359,16 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
+		<panel name="About_standard"/>
 		<ePixmap pixmap="icons/key_menu1.png" position="8,638" size="40,22" alphatest="blend"/>
 		<widget name="autostart_off" position="80,183" zPosition="1" pixmap="icons/lock_off.png" size="32,32" alphatest="on"/>
 		<widget name="autostart_on" position="80,183" zPosition="2" pixmap="icons/lock_on.png" size="32,32" alphatest="on"/>
-		<widget name="lab1" position="130,183" size="400,30" font="Regular;21" valign="center" transparent="1" backgroundColor="#00030303"/>
-		<widget name="lab2" position="80,253" size="150,30" backgroundColor="#00030303" font="Regular;21" valign="center" transparent="1"/>
+		<widget name="lab7" position="130,183" size="400,30" font="Regular;21" valign="center" transparent="1" backgroundColor="#00030303"/>
+		<widget name="lab9" position="80,253" size="150,30" backgroundColor="#00030303" font="Regular;21" valign="center" transparent="1"/>
 		<widget name="labplace" position="230,253" size="320,30" font="Regular;21" valign="center" backgroundColor="#0003424a"/>
-		<widget name="lab3" position="80,323" size="150,30" backgroundColor="#00030303" font="Regular;21" valign="center" transparent="1"/>
+		<widget name="lab8" position="80,323" size="150,30" backgroundColor="#00030303" font="Regular;21" valign="center" transparent="1"/>
 		<widget name="labsize" position="230,323" size="320,30" font="Regular;21" valign="center" backgroundColor="#0003424a"/>
-		<widget name="lab4" position="80,393" size="150,30" backgroundColor="#00030303" font="Regular;21" valign="center" transparent="1"/>
+		<widget name="lab10" position="80,393" size="150,30" backgroundColor="#00030303" font="Regular;21" valign="center" transparent="1"/>
 		<widget name="inactive" position="230,393" size="100,30" font="Regular;21" valign="center" halign="center" backgroundColor="red"/>
 		<widget name="active" position="230,393" size="100,30" zPosition="1" font="Regular;21" valign="center" halign="center" backgroundColor="green"/>
 	</screen>
@@ -6363,7 +6377,8 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
-		<widget name="lab1" position="80,270" size="170,25" font="Regular;23" halign="right" zPosition="2" backgroundColor="#00030303" transparent="1" valign="center"/>
+		<panel name="About_standard"/>
+		<widget name="lab7" position="80,270" size="170,25" font="Regular;23" halign="right" zPosition="2" backgroundColor="#00030303" transparent="1" valign="center"/>
 		<widget name="list" position="265,271" size="335,150" backgroundColor="#00030303" transparent="1" selectionPixmap="icons/ls330x26.png" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="#00030303" enableWrapAround="1"/>
 		<widget name="lab2" position="80,140" size="170,25" font="Regular;23" halign="right" zPosition="2" backgroundColor="#00030303" transparent="1"/>
 		<widget name="activecam" position="265,142" size="240,75" font="Regular;21" halign="left" zPosition="2" backgroundColor="#00030303" transparent="1" noWrap="1"/>
@@ -6378,6 +6393,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
+		<panel name="About_standard"/>
 		<widget name="list" position="80,145" size="727,425" font="Regular;15" backgroundColor="#00030303" transparent="1"/>
 	</screen>
 	<screen name="VISIONAutoStartCam" position="fill" flags="wfNoBorder">
@@ -6385,14 +6401,16 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
+		<panel name="About_standard"/>
 		<widget name="connect" position="280,220" size="64,64" zPosition="2" pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy24.png" transparent="1" alphatest="blend"/>
-		<widget name="lab1" position="80,133" halign="center" size="503,60" zPosition="1" font="Regular;21" backgroundColor="#00030303" valign="top" transparent="1"/>
+		<widget name="lab7" position="80,133" halign="center" size="503,60" zPosition="1" font="Regular;21" backgroundColor="#00030303" valign="top" transparent="1"/>
 	</screen>
 	<screen name="VISIONSoftcamMenu" position="fill" flags="wfNoBorder">
 		<panel name="PantallaGenericaConfig"/>
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
+		<panel name="About_standard"/>
 		<widget name="config" position="65,150" size="735,250" backgroundColor="#00030303" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="#00030303"/>
 	</screen>
 	<screen name="VISIONStartCam" position="fill" flags="wfNoBorder">
@@ -6400,16 +6418,18 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
+		<panel name="About_standard"/>
 		<widget name="connect" position="260,235" size="64,64" zPosition="2" pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy24.png" transparent="1" alphatest="blend"/>
-		<widget name="lab1" position="80,145" halign="center" size="503,60" zPosition="1" font="Regular;21" backgroundColor="#00030303" valign="top" transparent="1"/>
+		<widget name="lab7" position="80,145" halign="center" size="503,60" zPosition="1" font="Regular;21" backgroundColor="#00030303" valign="top" transparent="1"/>
 	</screen>
 	<screen name="VISIONStopCam" position="fill" flags="wfNoBorder">
 		<panel name="PantallaGenericaConfig"/>
 		<panel name="ScrollBarTemplate"/>
 		<panel name="Title"/>
 		<panel name="PIG"/>
+		<panel name="About_standard"/>
 		<widget name="connect" position="260,220" size="64,64" zPosition="2" pixmaps="/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy1.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy2.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy3.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy4.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy5.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy6.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy7.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy8.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy9.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy10.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy11.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy12.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy13.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy14.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy15.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy17.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy18.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy19.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy20.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy21.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy22.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy23.png,/usr/lib/enigma2/python/Plugins/SystemPlugins/Vision/images/busy24.png" transparent="1" alphatest="blend"/>
-		<widget name="lab1" position="80,145" halign="center" size="503,60" zPosition="1" font="Regular;21" backgroundColor="#00030303" valign="top" transparent="1"/>
+		<widget name="lab7" position="80,145" halign="center" size="503,60" zPosition="1" font="Regular;21" backgroundColor="#00030303" valign="top" transparent="1"/>
 	</screen>
 	<screen name="LogManager" position="fill" flags="wfNoBorder">
 		<panel name="PantallaGenericaConfig"/>
