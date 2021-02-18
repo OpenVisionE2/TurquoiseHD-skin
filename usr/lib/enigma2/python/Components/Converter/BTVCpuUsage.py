@@ -4,6 +4,7 @@ from Converter import Converter
 from Poll import Poll
 from Components.Element import cached
 
+
 class BTVCpuUsage(Converter, object):
     CPU_ALL = -2
     CPU_TOTAL = -1

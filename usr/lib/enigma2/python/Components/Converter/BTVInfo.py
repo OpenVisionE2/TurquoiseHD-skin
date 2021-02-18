@@ -7,6 +7,7 @@ import os
 from Poll import Poll
 from enigma import getBoxType
 
+
 class BTVInfo(Poll, Converter, object):
     BOXTYPE = 0
     LOAD = 1
