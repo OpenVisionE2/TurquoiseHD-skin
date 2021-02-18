@@ -21,7 +21,7 @@ class BTVRunning14Events(Converter, object):
     Event11 = 10
     Event12 = 11
     Event13 = 12
-    Event14 = 13	
+    Event14 = 13
     PrimeTime = 14
     noDuration = 15
     onlyDuration = 16
@@ -61,7 +61,7 @@ class BTVRunning14Events(Converter, object):
         elif type == 'Event13':
             self.type = self.Event13
         elif type == 'Event14':
-            self.type = self.Event14			
+            self.type = self.Event14
         elif type == 'PrimeTime':
             self.type = self.PrimeTime
         else:
