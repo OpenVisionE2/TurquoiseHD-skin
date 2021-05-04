@@ -5,7 +5,9 @@ from Components.Element import cached
 from Components.Sensors import sensors
 import os
 from Poll import Poll
-from enigma import getBoxType
+from Components.SystemInfo import BoxInfo
+
+model = BoxInfo.getItem("model")
 
 
 class BTVInfo(Poll, Converter, object):
@@ -39,7 +41,7 @@ class BTVInfo(Poll, Converter, object):
 
     def getModel(self):
         try:
-            box_info = getBoxType()
+            box_info = model
         except:
             return 'Model: N/A'
             box_info = None
@@ -107,7 +109,7 @@ class BTVInfo(Poll, Converter, object):
             return 'Uptime: %s' % uptime
 
     def getTempSensor(self):
-        if getBoxType() not in ("dm7020hd", "dm7020hdv2"):
+        if model not in ("dm7020hd", "dm7020hdv2"):
             try:
                 sensor_info = sensors.getSensorsList(sensors.TYPE_TEMPERATURE)
             except:
